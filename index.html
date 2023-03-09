@@ -44,10 +44,43 @@
             businesses of all sizes to help them stay connected, secure and efficient. Our team of experts can provide
             assistance with cloud solutions, cybersecurity, software development and more.</p>
           <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Contact</button>
+            <button type="button" class="btn btn-warning btn-lg px-4 gap-3" data-bs-toggle="modal"
+              data-bs-target="#contactModalCenter">Contact</button>
           </div>
         </div>
       </div>
+      <!--Contact Modal-->
+      <!-- Modal -->
+      <div class="modal fade" id="contactModalCenter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">How can we help?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleFormControlTextarea1" class="form-label">Query</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <!-- Features -->
       <div class="container px-4 py-5" id="hanging-icons">
         <h2 class="pb-2 border-bottom">Our Services</h2>
@@ -166,6 +199,7 @@
       <pre id="ipt-user-profile"></pre>
     </label>
   </div>
+
 </body>
 
 </html>
