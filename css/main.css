@@ -6,3 +6,7 @@
     margin-bottom: 10px;
     display: block;
   }
+
+  .sticky-offset {
+    top: 56px;
+}
