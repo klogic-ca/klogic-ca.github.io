@@ -1,5 +1,5 @@
 let auth0client = null;
-const fetchAuthConfig = () => fetch("/auth_config.json");
+const fetchAuthConfig = () => fetch("auth_config.json");
 
 const configureClient = async () => {
     const response = await fetchAuthConfig();
@@ -13,10 +13,14 @@ const configureClient = async () => {
 };
 
 window.onload = async () => {
-    await configureClient();
+    await configureClient()
+        .catch((e) => {
+            console.log(e);
+        });
     // NEW - update the UI state
     updateUI();
-    const isAuthenticated = await auth0Client.isAuthenticated();
+    const isAuthenticated = await auth0Client.isAuthenticated()
+        .catch((err) => { console.log(err); });
 
     if (isAuthenticated) {
         // show the gated content
